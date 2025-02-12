@@ -1,0 +1,7 @@
+Website = "https://example.com"
+
+[Details]
+  Icon = "clion.png"
+  Name = "cline"
+  ID = "com.soda.cl"
+  Version = "1.0.0"
