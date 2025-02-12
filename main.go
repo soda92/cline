@@ -23,13 +23,12 @@ func main() {
 	a := app.New()
 	w := a.NewWindow("germ")
 
-	c := "powershell.exe"
-	p, err := conpty.Start(c)
+	p, err := conpty.Start(`pwsh.exe`)
 	eval(err)
 
 	defer p.Close()
 
-	os.Setenv("TERM", "xterm-256color")
+	// os.Setenv("TERM", "xterm-256color")
 	terminal := NewTerminal(p)
 
 	w.SetContent(

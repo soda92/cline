@@ -81,7 +81,7 @@ func (t *Terminal) Blink() {
 		if blink {
 			t.ui.SetCell(t.row, t.col+t.cursor, widget.TextGridCell{Style: &widget.CustomTextGridStyle{BGColor: color.White}})
 		} else {
-			t.ui.SetCell(t.row, t.col+t.cursor, widget.TextGridCell{Style: &widget.CustomTextGridStyle{BGColor: theme.BackgroundColor()}})
+			t.ui.SetCell(t.row, t.col+t.cursor, widget.TextGridCell{Style: &widget.CustomTextGridStyle{BGColor: theme.Color(theme.ColorNameBackground)}})
 		}
 		blink = !blink
 	}
